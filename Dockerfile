@@ -1,9 +1,8 @@
-FROM frankyue/surgio
+FROM mhart/alpine-node:12
 
 COPY docker-entrypoint.sh gateway.js /
-COPY gateway.js /my-rule-store/
-RUN  chmod +x /docker-entrypoint.sh && \
-     \cp -rf /gateway.js /my-rule-store/
+
+RUN  chmod +x /docker-entrypoint.sh
 
 # Persistent config file
 VOLUME [ "/var/config"]
