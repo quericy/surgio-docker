@@ -18,6 +18,10 @@ if [ -f /my-rule-store/package.json ];then
     sed -i '/"scripts": {/a "generage": "surgio generate",' /my-rule-store/package.json
 fi
 
+# clean cache
 cd /my-rule-store
+npm cache clean --force
+
+#install gateway and run
 npm i @surgio/gateway --save
 npm run generage && node gateway.js
