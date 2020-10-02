@@ -22,6 +22,5 @@ fi
 cd /my-rule-store
 npm cache clean --force
 
-#install gateway and run
-npm i @surgio/gateway --save
+# generate rules and run gateway
 npm run generage && node gateway.js
