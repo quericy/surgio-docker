@@ -4,6 +4,12 @@
 ln -sf /usr/share/zoneinfo/${TZ:-"Asia/Shanghai"} /etc/localtime
 echo ${TZ:-"Asia/Shanghai"} > /etc/timezone
 
+# install rule-store
+cd /
+npm init surgio-store my-rule-store --use-cnpm
+
+# create gateway
+\cp -rf /gateway.js /my-rule-store/
 
 # custom config
 config_dir="/var/config"
