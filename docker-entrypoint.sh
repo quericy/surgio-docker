@@ -4,7 +4,6 @@
 ln -sf /usr/share/zoneinfo/${TZ:-"Asia/Shanghai"} /etc/localtime
 echo ${TZ:-"Asia/Shanghai"} > /etc/timezone
 
-
 # create gateway
 \cp -rf /gateway.js /my-rule-store/
 
@@ -18,9 +17,6 @@ if [ -f /my-rule-store/package.json ];then
     sed -i '/"scripts": {/a "generage": "surgio generate",' /my-rule-store/package.json
 fi
 
-# clean cache
-cd /my-rule-store
-npm cache clean --force
-
 # generate rules and run gateway
+cd /my-rule-store
 npm run generage && node gateway.js
