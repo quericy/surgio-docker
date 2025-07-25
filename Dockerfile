@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:12
+FROM mhart/alpine-node:18
 
 COPY docker-entrypoint.sh gateway.js /
 
