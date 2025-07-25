@@ -11,7 +11,17 @@ a docker image for surgio.
 + DockerHub地址:[quericy/surgio-docker](https://hub.docker.com/r/quericy/surgio-docker/tags)
 
 ### 更新
-由于DockerHub builds转收费，将不定期更新surgio对应的release版本，tag版本号与Surgio的版本对应。
+- 由于DockerHub builds转收费，将不定期更新surgio对应的release版本，tag版本号与Surgio的版本对应。
+
+- `V3`版本要求Node>=18+，如果从`V2`升级配置，请自行检查[V3升级指南](https://surgio.js.org/guide/upgrade-guide-v3.html)。
+
+### 镜像制作
+如果你想自己制作镜像，请克隆本仓库到本地build:
+```bash
+cd YOUR_CLONE_REPO_PATH
+docker build -t quericy/surgio-docker:vx.x.x .
+```
+
 
 ### 官方文档
 [https://surgio.royli.dev/guide/advance/api-gateway.html](https://surgio.royli.dev/guide/advance/api-gateway.html)
